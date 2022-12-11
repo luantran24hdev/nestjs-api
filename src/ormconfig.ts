@@ -7,6 +7,8 @@ const config: ConnectionOptions = {
   username: 'postgres',
   password: 'root',
   database: 'postgres',
+  entities: [__dirname + '/**/*.entity{.ts,.js}'],
+  synchronize: true,
 };
 
 export default config;
