@@ -9,6 +9,8 @@ const config: ConnectionOptions = {
   database: 'postgres',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: true,
+  migrations: ['src/migrations/*.ts', 'dist/migrations/*{.ts,.js}'],
+  cli: { migrationsDir: 'src/migrations' },
 };
 
 export default config;
